@@ -1,0 +1,225 @@
+:root {
+  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--LightGrayishBlue);
+}
+.flex {
+  width: 730px;
+  height: 280px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  box-shadow: 2px 2px 2px rgb(75, 75, 75);
+}
+.imagen-fon {
+  height: 280px;
+  width: 285px;
+}
+.imagen-fon img {
+  height: 280px;
+  width: 285px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.data-info {
+  height: 280px;
+  width: 445px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor {
+  width: 365px;
+  height: 212px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title {
+  height: 75px;
+  width: 95%;
+
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--VeryDarkGrayishBlue);
+}
+.subtitle {
+  height: 57px;
+  width: 95%;
+
+  font-weight: 500;
+  color: var(--VeryDarkGrayishBlue);
+}
+.perfil {
+  height: 55px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+  width: 175px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+}
+.img-perfil img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#botoncito {
+  background: var(--VeryDarkGrayishBlue);
+  width: 33px;
+  display: flex;
+  height: 33px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#botoncito img {
+  color: white;
+  display: block;
+  margin: auto;
+}
+.datos-per {
+  margin-left: 5px;
+}
+.datos-per h1 {
+  font-size: 13px;
+  color: var(--VeryDarkGrayishBlue);
+}
+.datos-per h2 {
+  font-size: 13px;
+  color: var(--DesaturatedDarkBlue);
+}
+#share {
+  height: 55px;
+  width: 250px;
+  position: absolute;
+  background: var(--VeryDarkGrayishBlue);
+  top: -70px;
+  border-radius: 10px;
+  right: -118px;
+  display: none;
+  align-items: center;
+  flex-direction: row;
+  
+}
+#share::before {
+  content: "";
+  position: absolute;
+  border-width: 10px 10px 0px 10px;
+  border-style: solid;
+  border-color: var(--VeryDarkGrayishBlue) transparent;
+  bottom: -10px;
+  right: 50%;
+}
+#share h1 {
+  margin-left: 10px;
+  color: var(--GrayishBlue);
+  font-size: 13px;
+  
+}
+#share img {
+  display: block;
+  margin: auto;  
+}
+@media screen and (max-width: 375px) {
+  .flex {
+    width: 330px;
+    height: 510px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .imagen-fon {
+    height: 200px;
+    width: 100%;
+  }
+  .imagen-fon img {
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .data-info {
+    height: 310px;
+    width: 100%;
+  }
+  .contenedor {
+    width: 270px;
+    height: 257px;
+  }
+  /*VA A SALIR MAL :'V*/
+  #share {
+    height: 75px;
+    width: 330px;
+    position: absolute;
+    background: var(--VeryDarkGrayishBlue);
+    top: 7px;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: -30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+  }
+  #share::before {
+    content: "";
+    position: absolute;
+    border-width: 10px 10px 0px 10px;
+    border-style: solid;
+    border-color: var(--VeryDarkGrayishBlue) transparent;
+    bottom: -10px;
+    right: 50%;
+    display: none;
+  }
+  #share h1 {
+    margin-left: 10px;
+    color: var(--GrayishBlue);
+    font-size: 13px;
+  }
+  #share img {
+    display: block;
+    margin: 15px;
+  }
+  #botoncito {
+    background: var(--DesaturatedDarkBlue);
+    width: 33px;
+    display: flex;
+    height: 33px;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  #botoncito img {
+    display: block;
+    margin: auto;
+  }
+}
